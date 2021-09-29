@@ -1,4 +1,6 @@
 /// hhoangcpascal
+/// Juggling Sequence
+/// https://open.kattis.com/problems/jugglingsequence
 
 #include <iostream>
 #include <algorithm>
