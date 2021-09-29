@@ -1,4 +1,6 @@
 /// hhoangcpascal
+/// Edge Removal
+/// https://open.kattis.com/problems/edgeremoval
 
 #include <iostream>
 #include <algorithm>
