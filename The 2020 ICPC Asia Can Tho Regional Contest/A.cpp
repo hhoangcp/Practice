@@ -1,4 +1,6 @@
 /// hhoangcpascal
+/// Alchemy 101
+/// https://open.kattis.com/problems/alchemy101
 
 #include <iostream>
 #include <algorithm>
