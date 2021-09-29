@@ -2,25 +2,30 @@
 
 #include <iostream>
 #include <algorithm>
+#include <queue>
 
 using namespace std;
 
-int n, res = 0;
+queue<int> Q;
 
 int main() {
     ios_base::sync_with_stdio(0); cin.tie(NULL);
 
-    cin >> n;
+    int t; cin >> t;
+    while (t--) {
+        int m; cin >> m;
 
-    char pre = '0';
-    for(int i = 1; i <= n; ++i) {
-        char c; cin >> c;
+        int res = 0;
+        for(int i = 1; i <= m; ++i) res ^= i;
 
-        if (c == pre) ++res;
-        pre = c;
+        if (res == m) cout << m << '\n';
+        else cout << m - 1 << '\n';
+
+        for(int i = 1; i <= m; ++i)
+        if ((res ^ m) != i) cout << i << ' ';
+
+        cout << '\n';
     }
-
-    cout << res;
 
     return 0;
 }
