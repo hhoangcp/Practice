@@ -1,4 +1,6 @@
-// hhoangcpascal
+/// hhoangcpascal
+/// Intelligence Exchange
+/// https://open.kattis.com/problems/intelligenceexchange
 
 #include <iostream>
 #include <algorithm>
