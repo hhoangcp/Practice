@@ -51,7 +51,7 @@ int main() {
         cur = P[c-'A'];
     }
 
-    cout << (llceil(ans);
+    cout << (long long) ceil(ans);
 
     return 0;
 }
