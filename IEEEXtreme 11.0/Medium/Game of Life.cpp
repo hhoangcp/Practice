@@ -41,8 +41,6 @@ string Solve(string old) {
 }
 
 int main() {
-    freopen("input.txt", "r", stdin);
-
     ios_base::sync_with_stdio(0); cin.tie(NULL);
 
     cin >> m >> n >> t; len = n*m;
