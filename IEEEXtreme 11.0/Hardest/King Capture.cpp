@@ -7,13 +7,13 @@
 using namespace std;
 
 vector<int> V[106];
-bool dp[106][106][106][2];
+bool dp[106][106][206][2];
 int n, m;
 
 void Init() {
     for(int i = 1; i <= n; ++i) dp[i][i][0][0] = dp[i][i][0][1] = true;
 
-    for(int step = 1; step <= n; ++step) {
+    for(int step = 1; step <= n+3; ++step) {
         for(int u = 1; u <= n; ++u)
         for(int v = 1; v <= n; ++v) {
             dp[u][v][step][0] = dp[u][v][step-1][1];
@@ -49,9 +49,9 @@ int main() {
         int mmax = -1;
 
         for(int v = 1; v <= n; ++v) {
-            int mmin = 1e9;
+            int mmin = -1;
 
-            for(int i = 0; i <= n; ++i)
+            for(int i = 0; i <= n+3; ++i)
             if (dp[u][v][i][0] == true) {
                 mmin = i;
                 break;
@@ -60,7 +60,7 @@ int main() {
             mmax = max(mmax, mmin);
         }
 
-        if (mmax < minsteps) {
+        if (mmax != -1 && mmax < minsteps) {
             minsteps = mmax;
             ver_white = u;
         }
